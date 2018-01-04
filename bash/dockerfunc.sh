@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+gcloud() {
+  docker run \
+    --rm \
+    -it \
+    -v "${HOME}/.gcloud:/root/.config/gcloud" \
+    -v "${HOME}/.ssh:/root/.ssh:ro" \
+    --name gcloud \
+    mschoening/gcloud "$@"
+}
+
 node() {
   docker run \
     --rm \
