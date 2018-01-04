@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.hyperlayout
+.pgdata
+.tool-versions-e
+node_modules/
+npm-debug.log
+

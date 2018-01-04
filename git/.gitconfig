@@ -1,0 +1,25 @@
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --
+[color]
+  ui = auto
+[core]
+  excludesfile = /Users/max/.gitignore_global
+  editor = vim
+[credential]
+  helper = osxkeychain
+[diff]
+  mnemonicprefix = true
+  renames = copies
+[github]
+  user = max
+[merge]
+  stat = true
+[push]
+  default = tracking
+  followTags = true
+[rerere]
+  enabled = true
+[user]
+  name = Max Schoening
+  email = max@max.wtf
+
