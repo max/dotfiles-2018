@@ -15,7 +15,8 @@ node() {
     --rm \
     --workdir /app \
     --volume $(pwd):/app \
-    mschoening/node:latest \
+    --name node \
+    mschoening/node \
     node "$@"
 }
 
@@ -24,7 +25,8 @@ npm() {
     --rm \
     --workdir /app \
     --volume $(pwd):/app \
-    mschoening/node:latest \
+    --name npm \
+    mschoening/node \
     npm "$@"
 }
 
@@ -33,6 +35,7 @@ npx() {
     --rm \
     --workdir /app \
     --volume $(pwd):/app \
-    mschoening/node:latest \
+    --name npx \
+    mschoening/node \
     npx "$@"
 }
