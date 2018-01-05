@@ -10,6 +10,19 @@ gcloud() {
     mschoening/gcloud "$@"
 }
 
+dgit() {
+  docker run \
+    --rm \
+    -it \
+    -v "${HOME}/.gitconfig:/root/.gitconfig" \
+    -v "${HOME}/.gitignore_global:/root/.gitignore_global" \
+    -v "${HOME}/.ssh:/root/.ssh:ro" \
+    -v $(pwd):/app \
+    --workdir /app \
+    --name hub \
+    mschoening/hub "$@"
+}
+
 node() {
   docker run \
     --rm \
