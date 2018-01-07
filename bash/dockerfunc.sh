@@ -52,3 +52,13 @@ npx() {
     mschoening/node \
     npx "$@"
 }
+
+dswift() {
+  docker run \
+    --rm \
+    -it \
+    -v $(pwd):/app \
+    --workdir /app \
+    --name swift \
+    mschoening/swift "$@"
+}
