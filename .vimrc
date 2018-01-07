@@ -22,16 +22,16 @@ call plug#end()
 
 filetype plugin indent on
 
-" Enable ruler and line numbers
+" enable ruler and line numbers
 set ruler
 set number
 
-" Spaces and tabs
+" spaces and tabs
 set expandtab
 set shiftwidth=2
 set tabstop=2
 
-" Airline config
+" airline config
 set noshowmode
 set laststatus=2
 let g:airline_powerline_fonts=1
