@@ -5,6 +5,7 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
+Plug 'fatih/vim-go'
 Plug '/usr/local/opt/fzf' " Must come before fzf
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
