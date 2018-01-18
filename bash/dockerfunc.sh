@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
 
+aws(){
+	docker run \
+    --rm \
+    -it \
+		-v "${HOME}/.aws:/root/.aws" \
+		--log-driver none \
+		--name aws \
+		mschoening/aws "$@"
+}
+
 gcloud() {
   docker run \
     --rm \
     -it \
     -v "${HOME}/.gcloud:/root/.config/gcloud" \
     -v "${HOME}/.ssh:/root/.ssh:ro" \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v $(pwd):/app \
+    --workdir /app \
     --name gcloud \
     mschoening/gcloud "$@"
 }
@@ -23,7 +36,7 @@ dgit() {
     mschoening/hub "$@"
 }
 
-node() {
+dnode() {
   docker run \
     --rm \
     --workdir /app \
@@ -33,7 +46,7 @@ node() {
     node "$@"
 }
 
-npm() {
+dnpm() {
   docker run \
     --rm \
     --workdir /app \
@@ -43,7 +56,7 @@ npm() {
     npm "$@"
 }
 
-npx() {
+dnpx() {
   docker run \
     --rm \
     --workdir /app \
