@@ -10,7 +10,7 @@ aws(){
 		mschoening/aws "$@"
 }
 
-gcloud() {
+dgcloud() {
   docker run \
     --rm \
     -it \
